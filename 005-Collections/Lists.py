@@ -42,3 +42,37 @@ print(type(list2))
 # use round brackets when using the constructor
 list6 = list(("apple", "banana", "orange"))
 print(list6)
+
+# Accessing list items
+# To access them, refer to the index number
+print(list1[1])  # returns banana
+
+# Negative indexing means starting the from the end
+# -1 refers to the last item, -2 refers to the second last item etc
+
+print(list1[-1])  # returns orange
+
+# Range of indexes
+# You can specify a range of indexes by specifying where to start and where to end the range
+# Returns a new list with the specified items
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+
+# The search starts at index 2 and end at (but not including) index 5
+print(thislist[2:5])
+
+# Returns items from the beginning to (not including) "kiwi"
+print(thislist[:4])
+
+# Returns items from "cherry" to the end
+print(thislist[2:])
+
+# Check if an item exists
+# Use the in keyword
+
+if "apple" in list1:
+    print("There is an apple in the list!")
+
+# To change the value of a specific item, refer to the index number:
+list1[1] = "blackcurrant"
+print(list1)
