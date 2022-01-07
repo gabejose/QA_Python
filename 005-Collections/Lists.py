@@ -113,3 +113,46 @@ print(list1)
 tropical = ["mango", "pineapple", "dragonfruit"]
 list1.extend(tropical)
 print(list1)
+
+# To remove a specified item, use the remove() method
+list1.remove("orange")
+print(list1)
+
+# To remove an item using its index, use the pop() method
+list1.pop(1)
+print(list1)
+
+# The del keyword can also remove the specified index
+# as well as delete the list completely
+del list1[3]
+
+print(list1)
+del list1
+
+# To empty the list, use the clear() method
+# The list will still be there, but it has no content
+list2.clear()
+print(list2)
+
+# Looping through lists
+
+# Using a for loop:
+for x in thislist:
+    print(x)
+
+# Looping through lists by referring to their index number
+# Use the range() and len() functions to create a suitable iterable
+
+for i in range(len(thislist)):
+    print(thislist[i])
+
+# Using a while loop
+# Use the len() function to get the length of the list,
+# start at 0 and loop through the list items by referring
+# to their indexes
+# Increment the index by 1 after each iteration
+
+i = 0
+while i < len(thislist):
+    print(thislist[i])
+    i += 1
