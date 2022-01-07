@@ -76,3 +76,40 @@ if "apple" in list1:
 # To change the value of a specific item, refer to the index number:
 list1[1] = "blackcurrant"
 print(list1)
+
+# To change the value of items within a specific range,
+# define a list with the new values and refer to the range
+# of index numbers where you want to insert the new values:
+thislist[1:3] = ["blackcurrant", "watermelon"]
+print(thislist)
+
+# Inserting more items than you replace means the new items
+# will be inserted where you specify and the remaining items
+# will move accordingly
+list1[1:2] = ["blackcurrant", "watermelon"]
+print(list1)
+
+# Inserting less items than you replace means the new items
+# will be inserted where you specified, and the remaining items
+# will move accordingly
+
+list1[1:3] = ["durian"]
+print(list1)
+
+# To insert a new list item, without replacing any of the
+# existing values, use the insert() method
+# The insert() method inserts an item at the specified index:
+
+list1.insert(2, "blackberry")
+print(list1)
+
+# To add an item to the end of the list, use the append() method
+list1.append("wintermelon")
+print(list1)
+
+# To append elements from another list to the current list,
+# use the extend() method
+# The elements will be added to the end of the list
+tropical = ["mango", "pineapple", "dragonfruit"]
+list1.extend(tropical)
+print(list1)
