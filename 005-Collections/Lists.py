@@ -204,3 +204,25 @@ def myfunc(n):
 # Sorts the list based on how close the number is to 50
 numlist.sort(key=myfunc)
 print(numlist)
+
+# Join two lists
+# There are several ways to join two or more lists
+
+# One way is to use the + operator
+list_a = ["a", "b", "c"]
+list_b = [1, 2, 3]
+
+list_c = list_a + list_b
+print(list_c)
+
+# Another way is by appending all the items from list_b into list_a
+
+# for x in list_b:
+#   list_a.append(x)
+# print(list_a)
+
+# You can also use the extend() method, which adds elements from one list
+# to another list
+
+list_a.extend(list_b)
+print(list_a)
