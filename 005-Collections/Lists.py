@@ -156,3 +156,51 @@ i = 0
 while i < len(thislist):
     print(thislist[i])
     i += 1
+
+# List Comprehension
+# Uses shorter syntax to create a new list based on the values of an existing list
+# Without list comprehension you have to write a for statement with a conditional test inside
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+    if "a" in x:
+        newlist.append(x)
+
+print(newlist)
+
+# With list comprehension you can do all that with only one line of code:
+# newlist = [expression for item in iterable if condition == True]
+# The condition is optional and can be omitted
+
+newlist = [x for x in fruits]
+print(newlist)
+
+# Sorting Lists
+# List objects have a sort() method that sorts the list alphanumerically
+# ascending by default
+
+thislist.sort()
+print(thislist)
+
+numlist = [100, 50, 22, 49, 23]
+numlist.sort()
+print(numlist)
+
+# To sort into descending order, use reverse = True:
+
+numlist.sort(reverse=True)
+print(numlist)
+
+# Customising your own sort function
+# Use key = function
+
+
+def myfunc(n):
+    return abs(n - 50)
+
+
+# Sorts the list based on how close the number is to 50
+numlist.sort(key=myfunc)
+print(numlist)
