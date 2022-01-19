@@ -16,6 +16,7 @@ class Person:
     def __init__(self, fname, lname):
         self.firstname = fname
         self.lastname = lname
+        self
 
     def printname(self):
         print("Good Morning World! My name is " +
@@ -34,8 +35,27 @@ x.printname()
 
 
 class Student(Person):
-    pass
+    def __init__(self, fname, lname, year):
+        super().__init__(fname, lname)
+        self.graduationyear = year
+
+    def welcome(self):
+        print("Welcome", self.firstname, self.lastname,
+              "to the class of", self.graduationyear)
 
 
-x = Student("Jimmy", "Olsen")
+x = Student("Jimmy", "Olsen", 2019)
 x.printname()
+x.welcome()
+
+# Add the __init__() function
+# Once added, the child class will no longer inherit the parent's __init__() function
+
+# To keep the inheritance, add a call to the parent's __init__() function
+
+# The super() function
+# This will make the child class inherit all the methods and properties
+# from its parent
+
+# Add Properties
+# E.g. Add a property called graduationyear to the Student class:
