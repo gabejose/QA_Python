@@ -4,6 +4,9 @@
 # Global variables are available from within any scope, gloabl and local
 x = 300
 
+# Naming variables
+#
+
 
 def myfunc():
     # A variable created inside a function belongs to the local scope of that function
